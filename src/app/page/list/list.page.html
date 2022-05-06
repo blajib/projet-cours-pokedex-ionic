@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding content">
+  <div class="fields">
+    <div class="label-list">
+        <label for="types" position="floating">Recherche par types</label>
+    </div>
+    <div class="pokemon-filter">
+        <ion-select name="types"  [(ngModel)]="typeChoiced">
+          <ion-select-option *ngFor="let type of types" [value]="type"> {{type.name}}
+          </ion-select-option>
+        </ion-select>
+    </div>
+
+    <!-- <div class="list-pokemons">
+      <div *ngFor="let pokemon of pokemons">
+        <button class="image-button-pokemon"><img src="{{pokemon.sprites.front_default}}"
+            /><img class="shinny-effect" src="./../../../assets/effect/clear-glass-effect.jpg"/></button>
+
+      </div>
+    </div> -->
+  </div>
+
+</ion-content>
